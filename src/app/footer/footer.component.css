@@ -1,0 +1,51 @@
+#foo_con {
+  background: #2e2e2e;
+  /* background-image: linear-gradient(
+    to right,
+    rgba(100, 0, 0, 1),
+    rgba(50, 0, 0, 1)
+  ); */
+  border: none;
+  color: #fff;
+  padding: 10px 0px 0px;
+}
+
+#foo_wrap {
+  background: #212121;
+  padding: 10px;
+}
+
+#footer_logo {
+  height: 50px;
+}
+
+.panel-footer span {
+  color: #f00;
+}
+
+.panel-footer p {
+  width: 70%;
+  font-size: 16px;
+  margin: auto;
+  text-align: justify;
+}
+
+.text-uppercase {
+  font-size: 20px;
+}
+
+.panel-footer a {
+  font-size: 16px;
+}
+
+.panel-footer a:hover {
+  color: #f00;
+}
+
+.social_btn_footer a {
+  margin: 5px;
+}
+
+.foo_first_sec {
+  padding-bottom: 10px;
+}

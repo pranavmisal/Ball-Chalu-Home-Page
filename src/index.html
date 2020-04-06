@@ -1,13 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>HomePage</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Website</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            $("#back-to-top").fadeIn();
+          } else {
+            $("#back-to-top").fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $("#back-to-top").click(function () {
+          $("body,html").animate(
+            {
+              scrollTop: 0,
+            },
+            200
+          );
+          return false;
+        });
+      });
+    </script>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      //document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".card-header").click(function () {
+          // self clicking close
+          if ($(this).next("#faq_card_body").hasClass("active")) {
+            $(this).next("#faq_card_body").removeClass("active").slideUp();
+            $(this)
+              .children("span")
+              .removeClass("fa-chevron-up")
+              .addClass("fa-chevron-down");
+          } else {
+            $(".card #faq_card_body").removeClass("active").slideUp();
+            $(".card .card-header span")
+              .removeClass("fa-chevron-up")
+              .addClass("fa-chevron-down");
+            $(this).next("#faq_card_body").addClass("active").slideDown();
+            $(this)
+              .children("span")
+              .removeClass("fa-chevron-down")
+              .addClass("fa-chevron-up");
+          }
+        });
+      });
+    </script>
+
+    <app-root></app-root>
+  </body>
 </html>

@@ -1,0 +1,94 @@
+nav {
+  padding: 10px 100px;
+  transition: 0.5s;
+  background: transparent;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+nav ul li a {
+  /* line-height: 80px; */
+  color: #fff;
+  /* padding: 5px 20px; */
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+nav.black {
+  background: rgba(0, 0, 0, 0.9);
+  height: 80px;
+  padding: 10px 50px;
+  z-index: 1;
+}
+
+.navbar-brand {
+  padding: 0 15px !important;
+}
+
+nav .navbar-brand img {
+  height: 50px;
+  transition: 0.5s;
+}
+
+nav.black .navbar-brand img {
+  height: 60px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #f00;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background: transparent;
+  font-weight: 500;
+  border-bottom: 2px solid #f00;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  background: rgba(0, 0, 0, 0.4);
+  top: 62px;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu a:hover,
+.navbar-inverse .navbar-nav .dropdown a:focus {
+  background-color: transparent;
+}
+
+/* media */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 0;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  nav.black {
+    padding: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  nav.black .navbar-brand img {
+    height: 50px;
+  }
+
+  nav ul li a {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  nav ul.active {
+    display: block;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus,
+  .navbar-inverse .navbar-nav .dropdown {
+    color: #fff;
+    background: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    border-bottom: 2px solid #f00;
+  }
+}
